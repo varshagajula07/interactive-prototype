@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-icon">✦</span>
+        <span>ProtoSpace</span>
+      </div>
+
+      <p class="nav-heading">WORKSPACE</p>
+
+      <button class="nav-link active" data-page="home">
+        <span>⌂</span> Home
+      </button>
+      <button class="nav-link" data-page="explore">
+        <span>◈</span> Explore
+      </button>
+      <button class="nav-link" data-page="profile">
+        <span>◎</span> My Profile
+      </button>
+      <button class="nav-link" data-page="settings">
+        <span>⚙</span> Settings
+      </button>
+
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <span class="help-icon">💡</span>
+          <strong>Have an idea?</strong>
+          <p>Help us improve your experience.</p>
+          <button class="small-button" id="sidebarFeedback">
+            Give feedback →
+          </button>
+        </div>
+        <p class="version">PROTOTYPE STUDIO · V1.0</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">YOUR CREATIVE SPACE</p>
+          <h2 id="pageTitle">Home</h2>
+        </div>
+        <button class="avatar" id="profileShortcut" aria-label="Open profile">
+          V
+        </button>
+      </header>
+
+      <section class="page active" id="home">
+        <div class="hero">
+          <div class="hero-content">
+            <span class="pill">✦ INTERACTIVE EXPERIENCE</span>
+            <h1>Ideas become<br>experiences.</h1>
+            <p>Explore your workspace, discover features, and help shape a better app experience.</p>
+            <button class="primary-button" data-go="explore">
+              Explore features <span>→</span>
+            </button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="art-circle circle-one"></div>
+            <div class="art-circle circle-two"></div>
+            <div class="floating-card card-one">✦<br><small>Imagine</small></div>
+            <div class="floating-card card-two">✓<br><small>Create</small></div>
+            <div class="art-star">✳</div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <h3>Your workspace</h3>
+            <p>Choose a feature to get started.</p>
+          </div>
+          <span class="subtle-tag">4 FEATURES</span>
+        </div>
+
+        <div class="feature-grid">
+          <button class="feature-card" data-go="explore">
+            <span class="feature-icon purple">◈</span>
+            <strong>Discover</strong>
+            <p>Explore what your app can do.</p>
+            <span class="card-arrow">↗</span>
+          </button>
+
+          <button class="feature-card" data-go="profile">
+            <span class="feature-icon pink">◎</span>
+            <strong>Your profile</strong>
+            <p>View your personal details.</p>
+            <span class="card-arrow">↗</span>
+          </button>
+
+          <button class="feature-card" id="openFeedback">
+            <span class="feature-icon yellow">✎</span>
+            <strong>Share feedback</strong>
+            <p>Tell us what you think.</p>
+            <span class="card-arrow">↗</span>
+          </button>
+
+          <button class="feature-card" data-go="settings">
+            <span class="feature-icon green">⚙</span>
+            <strong>Preferences</strong>
+            <p>Customize your experience.</p>
+            <span class="card-arrow">↗</span>
+          </button>
+        </div>
+
+        <div class="bottom-banner">
+          <div>
+            <span class="banner-label">BUILT FOR BETTER EXPERIENCES</span>
+            <h3>Your opinion matters.</h3>
+            <p>Test this prototype and help make the next version better.</p>
+          </div>
+          <button class="secondary-button" id="bannerFeedback">
+            Leave feedback →
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="explore">
+        <div class="page-intro">
+          <span class="feature-icon purple large-icon">◈</span>
+          <h1>Explore features</h1>
+          <p>Discover the different parts of this interactive prototype.</p>
+        </div>
+        <div class="explore-grid">
+          <article class="content-card">
+            <span class="feature-icon purple">✦</span>
+            <h3>Interactive design</h3>
+            <p>Buttons and cards respond to your actions.</p>
+            <span class="status">● Available</span>
+          </article>
+          <article class="content-card">
+            <span class="feature-icon pink">↗</span>
+            <h3>Smart navigation</h3>
+            <p>Move between app screens without reloading.</p>
+            <span class="status">● Available</span>
+          </article>
+          <article class="content-card">
+            <span class="feature-icon yellow">★</span>
+            <h3>User testing</h3>
+            <p>Rate your experience and share suggestions.</p>
+            <button class="text-button" id="exploreFeedback">Try it now →</button>
+          </article>
+          <article class="content-card">
+            <span class="feature-icon green">◉</span>
+            <h3>Personal settings</h3>
+            <p>Change your display preferences.</p>
+            <button class="text-button" data-go="settings">Open settings →</button>
+          </article>
+        </div>
+        <button class="secondary-button back-home" data-go="home">← Back to home</button>
+      </section>
+
+      <section class="page" id="profile">
+        <div class="profile-card">
+          <div class="profile-avatar">V</div>
+          <h1 id="profileName">Prototype Tester</h1>
+          <p class="muted">Interactive Prototype User</p>
+          <span class="pill">✦ EXPLORER</span>
+        </div>
+        <div class="content-card profile-details">
+          <h3>Your profile</h3>
+          <label for="nameInput">Display name</label>
+          <input id="nameInput" type="text" maxlength="40" placeholder="Enter your name">
+          <button class="primary-button" id="saveProfile">Save changes</button>
+        </div>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="page-intro">
+          <h1>Settings</h1>
+          <p>Make this prototype feel like yours.</p>
+        </div>
+        <div class="content-card settings-card">
+          <div class="setting-row">
+            <div>
+              <strong>Dark appearance</strong>
+              <p>Switch between light and dark themes.</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="darkToggle">
+              <span class="switch-track"></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div>
+              <strong>Prototype information</strong>
+              <p>Learn about this student project.</p>
+            </div>
+            <button class="text-button" id="aboutButton">Learn more →</button>
+          </div>
+          <div class="setting-row">
+            <div>
+              <strong>User feedback</strong>
+              <p>Help improve the next version.</p>
+            </div>
+            <button class="text-button" id="settingsFeedback">Give feedback →</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Made with curiosity & creativity ✦</span>
+        <button id="footerFeedback">Send feedback</button>
+      </footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="feedbackModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close dialog">×</button>
+      <span class="feature-icon yellow">✎</span>
+      <h2 id="modalTitle">Your feedback matters!</h2>
+      <p class="muted">Help us understand your experience with this prototype.</p>
+
+      <form id="feedbackForm">
+        <label>How was your experience?</label>
+        <div class="rating-options">
+          <label><input type="radio" name="rating" value="1" required><span>1</span></label>
+          <label><input type="radio" name="rating" value="2"><span>2</span></label>
+          <label><input type="radio" name="rating" value="3"><span>3</span></label>
+          <label><input type="radio" name="rating" value="4"><span>4</span></label>
+          <label><input type="radio" name="rating" value="5"><span>5</span></label>
+        </div>
+        <label for="feedbackText">Suggestions or comments</label>
+        <textarea id="feedbackText" rows="4" maxlength="1000"
+          placeholder="Tell us what you liked or what we could improve..."></textarea>
+        <button type="submit" class="primary-button submit-button">Submit feedback →</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
